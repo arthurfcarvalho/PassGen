@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:paddingTop="48dp"> <!-- Mover todos os elementos um pouco mais para baixo -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"> <!-- Aumenta o espaço entre senha gerada e as opções -->
+
+        <TextView
+            android:id="@+id/tv_password_generated"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Generated Password"
+            android:textSize="24sp"
+            android:padding="16dp"
+            android:ellipsize="end" />
+
+        <ImageView
+            android:id="@+id/iv_toggle_visibility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_visibility"
+            android:contentDescription="Toggle Visibility"
+            android:padding="8dp" />
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/seekbar_length"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="20"
+        android:layout_marginBottom="16dp" /> <!-- Espaço maior entre SeekBar e próximo elemento -->
+
+    <TextView
+        android:id="@+id/tv_length"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="8dp"
+        android:text="Password Length: 8"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp" /> <!-- Espaço maior entre este texto e as opções -->
+
+    <CheckBox
+        android:id="@+id/cb_uppercase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Include Uppercase Letters" />
+
+    <CheckBox
+        android:id="@+id/cb_lowercase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Include Lowercase Letters" />
+
+    <CheckBox
+        android:id="@+id/cb_numbers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Include Numbers" />
+
+    <CheckBox
+        android:id="@+id/cb_exclude_similar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="Exclude Similar Characters"/>
+
+    <Button
+        android:id="@+id/btn_generate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Generate Password"
+        android:layout_marginTop="16dp" /> <!-- Aumenta o espaço entre botões e as opções -->
+
+    <Button
+        android:id="@+id/btn_copy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Copy to Clipboard"
+        android:layout_marginTop="8dp" /> <!-- Aumenta o espaço entre os botões -->
+</LinearLayout>
